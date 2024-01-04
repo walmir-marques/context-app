@@ -1,8 +1,7 @@
-import { PostContext } from "@/contexts/postContext";
-import React, { useContext } from "react";
+import { usePosts } from "@/contexts/postContext";
 
 export const PostList = () => {
-  const postCtx = useContext(PostContext);
+  const postCtx = usePosts();
   const handleRemovePost = (id) => {
     postCtx?.removePost(id);
   };

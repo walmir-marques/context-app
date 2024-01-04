@@ -1,10 +1,10 @@
-import { PostContext } from "@/contexts/postContext";
-import { useContext, useState } from "react";
+import { usePosts } from "@/contexts/postContext";
+import { useState } from "react";
 
 export const Header = () => {
   const [titleInput, setTitleInput] = useState("");
   const [contentInput, setContentInput] = useState("");
-  const postCtx = useContext(PostContext);
+  const postCtx = usePosts();
 
   const handleAddPost = () => {
     if (titleInput && contentInput) {

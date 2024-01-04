@@ -1,6 +1,6 @@
 import { postReducer } from "@/reducers/postReducer";
 
-const { createContext, useReducer } = require("react");
+const { createContext, useReducer, useContext } = require("react");
 
 export const PostContext = createContext(null);
 
@@ -20,3 +20,5 @@ export const PostProvider = ({ children }) => {
     </PostContext.Provider>
   );
 };
+
+export const usePosts = () => useContext(PostContext);
